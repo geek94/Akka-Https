@@ -22,7 +22,6 @@ object Boot extends App {
 
   implicit val flowMaterializer = ActorMaterializer()
 
-
   val ks: KeyStore = KeyStore.getInstance("PKCS12")
   val keystore: InputStream = getClass.getClassLoader.getResourceAsStream("keystore.pkcs12")
 
