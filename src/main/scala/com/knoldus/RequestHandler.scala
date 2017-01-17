@@ -5,7 +5,7 @@ import akka.http.scaladsl.model.StatusCodes._
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
 
-trait MainService {
+trait RequestHandler {
 
   def route: Route =
     pathPrefix("demo") {

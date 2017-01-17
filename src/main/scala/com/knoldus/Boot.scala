@@ -39,7 +39,7 @@ object Boot extends App {
   val sslContext: SSLContext = SSLContext.getInstance("TLS")
   sslContext.init(keyManagerFactory.getKeyManagers, tmf.getTrustManagers, new SecureRandom)
   val https: HttpsConnectionContext = ConnectionContext.https(sslContext)
-  val route = new MainService {}.route
+  val route = new RequestHandler {}.route
 
   val httpsBinding = Http().bindAndHandle(route, "127.0.0.1", 4400, connectionContext = https)
 
