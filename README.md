@@ -7,4 +7,3 @@ Steps to test example manually
 1. `sbt run`
 2. Download Postman or any other rest client for making requests on your server.
    ex: GET https://localhost:4400/demo
-   or just [click](https://localhost:4400/demo) in a browser.
