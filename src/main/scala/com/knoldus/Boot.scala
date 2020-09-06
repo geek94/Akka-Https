@@ -43,7 +43,7 @@ object Boot extends App {
 
   val httpsBinding = Http().bindAndHandle(route, "127.0.0.1", 4400, connectionContext = https)
 
-  println(s"Server is now online at http://4400\nPress RETURN to stop...")
+  println(s"Server is now online at https://localhost:4400/demo\nPress RETURN to stop...")
 
   StdIn.readLine()
   httpsBinding.flatMap(_.unbind()).onComplete(_ => actorSystem.terminate())
